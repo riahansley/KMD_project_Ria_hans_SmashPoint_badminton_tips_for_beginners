@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #f4f7fa;
+}
+
+/* NAVBAR */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 15px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+}
+
+nav .logo {
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #4f8f9d;
+  transition: 0.3s ease;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  background-image: url("https://i.pinimg.com/1200x/d4/0b/5f/d40b5f9e9805d7c59757b56be2b165d9.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  position: relative;
+  padding-top: 80px;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.hero-content {
+  position: relative;
+  max-width: 1200px;
+  padding: 20px;
+}
+
+/* one line */
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+  white-space: nowrap;
+}
+
+.hero p {
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.content {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.content section {
+    margin-bottom: 35px;
+}
+
+.content h2 {
+    color: #0a1f44;
+    margin-bottom: 12px;
+    font-size: 1.5rem;
+}
+
+.content p {
+    margin-bottom: 10px;
+}
+
+.content ul {
+    margin-left: 20px;
+}
+
+.content li {
+    margin-bottom: 8px;
+}
+
+.contact-box {
+    background-color: #ffffff;
+    border-left: 6px solid #0a1f44;
+    padding: 25px;
+    border-radius: 4px;
+}
+
+.contact-box p {
+    margin-bottom: 10px;
+}
+
+.contact-details p {
+    margin-bottom: 6px;
+}
+
+.contact-details a {
+    color: #0a1f44;
+    text-decoration: none;
+}
+
+.contact-details a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #f4f7fa;
+}
+
+/* NAVBAR */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 15px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+}
+
+nav .logo {
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #4f8f9d;
+  transition: 0.3s ease;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  background-image: url("https://i.pinimg.com/1200x/d4/0b/5f/d40b5f9e9805d7c59757b56be2b165d9.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  position: relative;
+  padding-top: 80px;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.hero-content {
+  position: relative;
+  max-width: 1200px;
+  padding: 20px;
+}
+
+/* FORCE ONE LINE */
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+  white-space: nowrap;
+}
+
+.hero p {
+  font-size: 20px;
+  line-height: 1.6;
+}
+.rules {
+  width: 100%;
+  padding: 100px 60px;
+}
+
+.rules-container {
+  max-width: 1400px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.rule-card {
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.rule-card img {
+  width: 220px;
+  border-radius: 12px;
+}
+
+.rule-card h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.rule-card ul {
+  padding-left: 20px;
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+.rule-card p {
+  color: black;
+  font-size: 18px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  nav {
+    padding: 15px 25px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+    white-space: normal;
+  }
+
+  .rule {
+    padding: 80px 25px;
+  }
+
+  .rule-card {
+    flex-direction: column;
+    text-align: center;
+  }
+}
